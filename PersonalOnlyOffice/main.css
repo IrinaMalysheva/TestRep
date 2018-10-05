@@ -3,37 +3,46 @@ body {
     color: #124100;
     font-weight: 700;
     background: url('Images/shutterstoke.jpg') no-repeat;
-}
-div {
-    margin-left: 20%;
-    margin-right: 20%;
+    background-size: cover; /*По размеру экрана*/
 }
 header {
     margin-left: 20%;
     margin-right: 20%;
     position: relative;
 }
-header h1, header nav {
+nav:nth-child(2) {
     display: inline-block;
+    float: right;
+    width: 30%;
+}
+header div {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 header.logo{
     float: left;
-}
-header nav {
-    float: right;
 }
 .login_btn {
     text-decoration: none; /* убирать подчёркивание у ссылок */
     user-select: none; /* убирать выделение текста */
     display: inline-block;
     color: white;
-    font-weight: 700;
     padding: .5em 2em;
     outline: none;
     border: 1px solid;
     border-radius: 2px;
-    transition: 0.2s;
-    /*transform: translateY(-50%);*/
+    /*transition: 0.2s;*/
     /*vertical-align: middle; in line box*/
-    transform: translateY(-12.5%);
+    transform: translateY(10%);
+    float: left;
+    margin-right: 20%;
+}
+.fl {
+    display: inline-block;
+    transform: translateY(60%);
+    margin-right: 0;  
+}
+#flag {
+    width: 25px;
+    height: 16px;
 }
