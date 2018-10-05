@@ -1,0 +1,39 @@
+body {
+    background: url(Images\shutterstock_272163416.jpg);
+    color: #124100;
+    font-weight: 700;
+    background: url('Images/shutterstoke.jpg') no-repeat;
+}
+div {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+header {
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+}
+header h1, header nav {
+    display: inline-block;
+}
+header.logo{
+    float: left;
+}
+header nav {
+    float: right;
+}
+.login_btn {
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    padding: .5em 2em;
+    outline: none;
+    border: 1px solid;
+    border-radius: 2px;
+    transition: 0.2s;
+    /*transform: translateY(-50%);*/
+    /*vertical-align: middle; in line box*/
+    transform: translateY(-12.5%);
+}
