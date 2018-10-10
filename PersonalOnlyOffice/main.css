@@ -1,23 +1,33 @@
 body {
-    background: url(Images\shutterstock_272163416.jpg);
-    color: #124100;
+    color: #86ff56;
     font-weight: 700;
     background: url('Images/shutterstoke.jpg') no-repeat;
     background-size: cover; /*По размеру экрана*/
+    background-size: 100%;
 }
 header {
     margin-left: 20%;
     margin-right: 20%;
+    width: 60%;
+    margin-top: 0.25%;
     position: relative;
+    display: inline-block;
 }
-nav:nth-child(2) {
+/*nav:nth-child(2) {
     display: inline-block;
     float: right;
     width: 30%;
-}
+}*/
 header div {
-    margin-left: 20%;
-    margin-right: 20%;
+    /*margin-left: 5%;
+    margin-right: 5%;*/
+    float: right;
+    /* transform: translateY(-12.5%); */
+    display: inline-block;
+    wi
+}
+header div a {
+    float: right;
 }
 header.logo{
     float: left;
@@ -33,16 +43,39 @@ header.logo{
     border-radius: 2px;
     /*transition: 0.2s;*/
     /*vertical-align: middle; in line box*/
-    transform: translateY(10%);
-    float: left;
-    margin-right: 20%;
+    /* float: right; */
+    margin-right: 30%;
+    transform: translateY(5%);
 }
 .fl {
     display: inline-block;
-    transform: translateY(60%);
-    margin-right: 0;  
+    transform: translateY(-120%);
+    margin-right: 0;
+    /* float: right; */
 }
 #flag {
-    width: 25px;
+    /* display: inline-block; */
+    
     height: 16px;
+}
+
+h1 {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    position: relative;
+    display: inline-block;
+    font-size: 210%;
+    color: white;
+}
+
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    margin-top: 20%;
+    position: relative;
+    display: inline-block;
 }
