@@ -130,10 +130,16 @@ h2 {
 footer {
     background: #f7f7f7;
     margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    white-space: nowrap;
 }
 footer div:only-child {
     /* margin-left: 20%;
     margin-right: 20%; */
+    position: relative;
     width: 60%;
     margin: 0 auto;
     /* display: inline-block; */
@@ -147,15 +153,22 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-.rights {
-    margin: 0;
+.copyr {
+    display: inline-block;
+    float: right;
+}
+.frights {
+    /* margin: 0; */
     padding: 0;
     color: #000;
-    float: right;  
+    margin-right: 48px; 
     display: inline-block;
+    float: left;
 }
-.rights a {
-    /* background: url('Images/instagram icon.png') no-repeat transparent;
-    color: #00000000; */
-    margin-left: 10px;
+.inst {
+    position: absolute;
+    right: 0;
+    display: inline-block; 
+    margin-right: 0px;
+    max-width: 24px; 
 }
