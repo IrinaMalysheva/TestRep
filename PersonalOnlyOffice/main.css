@@ -2,13 +2,10 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', Verdana, sans-serif;
-    font: lighter; /*?*/
+    /*font-weight: lighter; /*?*/
     /* font: normal; */
 }
 body {
-    color: #86ff56;
-    font-weight: lighter;
-    font-weight: 700;
     padding: 0;
     margin: 0;
 }
@@ -43,7 +40,7 @@ header div {;
 .fl {
     float: right;
     width: 24px;
-    margin: 7px 12px 0 25px;
+    margin: 7px 0px 0 22px;
 }
 #flag {
     height: 15px;
@@ -98,6 +95,133 @@ h1 {
     background: #f26341;
     margin: -5px 0px -23px 6px; */
 }
+
+
+#stickydiv {
+    position: absolute;
+    left: 322px;
+    top: 400px;
+    height: 150px;
+    width: 960px;
+    background: #fff;
+    border: 1px solid #bebebe;
+    border-radius: 3px;
+    font-size: 15px;
+}
+#stickydiv input[type="text"] {
+    position: relative;
+    top: 36px;
+    left: 28px;
+    width: 272px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    border-right: none;
+    font-size: 14px;
+    padding: 15px 20px;
+}
+#stickydiv a{
+    position: relative;
+    top: 36px;
+    left: 24px;
+    width: 200px;
+    background: #f16240;
+    border: none;
+    padding: 13px 20px 15px;
+    opacity: 0.5;
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+}
+#stickydiv a:hover {
+    background: #fd6a46;
+}
+#stickydiv span {
+    position: relative;
+    top: 36px;
+    left: 50px;
+    color: #333;
+    margin: 0 44px 0 0
+}
+#stickydiv a.webs {
+    background: #fff;
+    border-radius: 3px;
+    margin: 0 10px 0 0;
+    box-shadow: 0px 2px 2px #c4c9cc;
+}
+#stickydiv a.webs.Google {
+    font-family: 'Roboto',sans-serif;
+    color: #555;
+    background: url(Images/Google24.png) no-repeat 10px center;
+    background-size: 18px;
+    padding: 13px 3px 15px 45px;
+}
+#stickydiv a.webs.Facebook {
+    background: url(Images/Facebook-49x100.png) no-repeat 15px center;
+    background-size: 10px;
+    padding: 12px 30px 15px 11px;
+}
+#stickydiv a.webs.LinkedIn {
+    background: url(Images/linkedin.png) no-repeat 13px center;
+    background-size: 19px;
+    padding: 12px 35px 15px 11px;
+}
+#stickydiv input[type="checkbox"] {
+    position: absolute;
+    top: 96px;
+    left: 24px;
+    z-index: 10;
+}
+#stickydiv input[type="checkbox"]+p::before {
+    content: '';
+    position: absolute;
+    top: 96px;
+    left: 24px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    outline: none;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+}
+#stickydiv input[type="checkbox"]:checked+p::before {
+    content: '';
+    display: block;
+    border: 1px solid #333;
+    transform: rotateZ(45deg);
+    border-width: 0 1px 1px 0;
+    width: 5px;
+    height: 12px;
+}
+#stickydiv input[type="checkbox"]:last-of-type {
+    top: 122px;
+}
+#stickydiv div span {
+    position: absolute;
+    top: 99px;
+    left: 52px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+#stickydiv div span:last-of-type {
+    top: 125px;
+}
+#stickydiv span a {
+    text-decoration: none;
+    background: none;
+    color: #f16240;
+    padding: 0;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}
+#stickydiv span a:hover {
+    background: none;
+}
+
+
+
 
 
 main {
