@@ -11,7 +11,7 @@ body {
 }
 header {
     width: 100%;
-    display: inline-block;
+    /* display: inline-block; */
     background: #8e9faf;
     background: url('Images/shutterstoke.jpg') no-repeat center 0;
     /*Центр по центру блока, отступ сверху - 0*/
@@ -19,13 +19,13 @@ header {
     font-weight: lighter;
     padding-top: 12px;
 }
-header div {;
-    width: 60%;
+.topdiv {
+    width: 962px;
     margin: 0 auto;
 }
-.logo{
-    margin-left: 10px;
-}
+/* .logo{
+    margin-left: 16px;
+} */
 .login_btn {
     text-decoration: none; /* убирать подчёркивание у ссылок */
     /*user-select: none; /* убирать выделение текста */
@@ -49,13 +49,14 @@ header div {;
     border-radius: 2px;
 }
 
-
-.top {
-    margin: 0 auto;
-    width: 60%;
+.second {
+    /* margin: 0 auto;
+    width: 60%; */
     color: white;
     font-family: "Open Sans", Verdana, sans-serif;
-    padding: 4px 0 136px 32px;
+    padding: 4px 0 136px 10px;
+    width: 962px;
+    margin: 0 auto;
 }
 h1 {
     font-weight: lighter;
@@ -63,10 +64,10 @@ h1 {
     font-size: 36px;
     margin-bottom: 28px;
 }
-.top p {
+.second p {
     font-size: 18px;
 }
-.top p::before {
+.second p::before {
     content: '';
     width: 9px;
     height: 9px;
@@ -79,7 +80,7 @@ h1 {
     border: 2px solid #b36840;
     margin: 0px 12px 0 0;
 }
-.top p::after {
+.second p::after {
     content: '';
     width: 1px;
     height: 34px;
@@ -87,7 +88,7 @@ h1 {
     background: #f26341;
     margin: -5px 0px -23px 6px;
 }
-.top p:last-child:after {
+.second p:last-child:after {
     content: '';
     width: 0;
     /* height: 34px;
@@ -98,15 +99,16 @@ h1 {
 
 
 #stickydiv {
-    position: absolute;
-    left: 322px;
-    top: 400px;
+    position: relative;
     height: 150px;
     width: 960px;
     background: #fff;
     border: 1px solid #bebebe;
     border-radius: 3px;
     font-size: 15px;
+    margin: 0 auto;
+    margin-top: -100px;
+    margin-bottom: 40px;
 }
 #stickydiv input[type="text"] {
     position: relative;
@@ -165,27 +167,31 @@ h1 {
     background-size: 19px;
     padding: 12px 35px 15px 11px;
 }
-#stickydiv input[type="checkbox"] {
+#stickydiv div {
     position: absolute;
-    top: 96px;
-    left: 24px;
-    z-index: 10;
+    top: 60px;
+    left: 28px;
 }
-#stickydiv input[type="checkbox"]+p::before {
-    content: '';
+#stickydiv input[type="checkbox"] {
+    display: none;
+}
+#stickydiv label {
     position: absolute;
-    top: 96px;
-    left: 24px;
+}
+.imp {
+    top: 26px;
+}
+#stickydiv input[type="checkbox"]+span {
+    content: '';
     width: 14px;
     height: 14px;
     background: #fff;
     border: 1px solid #bdbdbd;
-    outline: none;
     box-sizing: border-box;
-    display: inline-block;
-    cursor: pointer;
+    display: block;
+    left: 0;
 }
-#stickydiv input[type="checkbox"]:checked+p::before {
+#stickydiv input[type="checkbox"]:checked+span::before {
     content: '';
     display: block;
     border: 1px solid #333;
@@ -193,21 +199,17 @@ h1 {
     border-width: 0 1px 1px 0;
     width: 5px;
     height: 12px;
-}
-#stickydiv input[type="checkbox"]:last-of-type {
-    top: 122px;
-}
-#stickydiv div span {
     position: absolute;
-    top: 99px;
-    left: 52px;
+    left: 3px;
+}
+#stickydiv div p {
+    position: absolute;
     font-size: 12px;
     white-space: nowrap;
+    top: 24px;
+    left: 26px;
 }
-#stickydiv div span:last-of-type {
-    top: 125px;
-}
-#stickydiv span a {
+#stickydiv p a {
     text-decoration: none;
     background: none;
     color: #f16240;
@@ -216,7 +218,7 @@ h1 {
     left: 0;
     opacity: 0.9;
 }
-#stickydiv span a:hover {
+#stickydiv p a:hover {
     background: none;
 }
 
@@ -231,7 +233,7 @@ main {
 .white:first-of-type {
     margin-top: 100px;
 }
-white {
+.white {
     margin: 0;
 }
 .gray {
@@ -261,7 +263,7 @@ h2 {
     height: 2px;
 }
 .content {
-    width: 60%;
+    width: 962px;
     margin: 0 auto;
     color: #333;
     font-weight: lighter; 
@@ -348,7 +350,7 @@ footer div:only-child {
     /* margin-left: 20%;
     margin-right: 20%; */
     position: relative;
-    width: 60%;
+    width: 962px;
     margin: 0 auto;
 }
 footer a {
