@@ -44,6 +44,7 @@ header {
     border-radius: 2px;
 }
 
+
 .second {
     color: white;
     padding: 4px 0 136px 10px;
@@ -101,7 +102,6 @@ h1 {
     top: 36px;
     left: 28px;
     width: 272px;
-    background: #fff;
     border: 1px solid #bdbdbd;
     border-right: none;
     font-size: 14px;
@@ -127,7 +127,7 @@ h1 {
     top: 36px;
     left: 50px;
     color: #333;
-    margin: 0 44px 0 0
+    margin: 0 44px 0 0;
 }
 #stickydiv a.webs {
     background: #fff;
@@ -163,7 +163,7 @@ h1 {
 #stickydiv label {
     position: absolute;
 }
-.imp {
+.chk-accept {
     top: 26px;
 }
 #stickydiv input[type="checkbox"]+span {
@@ -221,7 +221,6 @@ main {
     background: #f7f7f7;
 }
 h2 {
-    
     font-size: 36px;
     margin: 0 0 0 20px;
     padding-top: 40px;
@@ -243,8 +242,7 @@ h2 {
     color: #333;
 }
 .content p {
-    margin: 0 0 10px 20px;
-    
+    margin: 0 0 10px 20px; 
     font-size: 15px;
 }
 .content img {
@@ -258,8 +256,7 @@ h2 {
 }
 .pictext {
     width: 33%;
-    font-size: 15px;
-    
+    font-size: 15px; 
     float: left;
 }
 .pictext img {
@@ -286,8 +283,7 @@ h2 {
     float: left;
 }
 h4 {
-    font-size: 25px;
-    
+    font-size: 25px;   
     margin: 0 0 15px 0;
 }
 .textli p{
@@ -309,6 +305,7 @@ h4 {
     width: 120px;
     margin: 20px 20px 50px 1px;
 }
+
 
 footer {
     background: #f7f7f7;
