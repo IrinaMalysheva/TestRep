@@ -6,6 +6,12 @@
     margin: 0;
     padding: 0;
 }
+.middle-size(@rules) {
+    @media (max-width: 1040px) { @rules(); }
+}
+.small-size(@rules) {
+    @media (max-width: 767px) { @rules(); }
+}
 html {
     .mp0();
     font-family: 'Open Sans', Verdana, sans-serif;
@@ -20,40 +26,65 @@ body {
     border-radius: 2px;
 }
 header {
-    width: 100%;
     background: #8e9faf;
     background: url('Images/shutterstoke.jpg') no-repeat center 0;
-    padding-top: 12px;
+    .middle-size({
+        background-size: cover;
+    });
     .topdiv {
         .w960-center();
-    }
-    .login_btn {
-        float: right;
-        margin-top: 5px;
-        padding: 7px 33px;
-        font-size: 15px;
-        .white-border();
-        text-decoration: none;
-        user-select: none;
-    }
-    .fl {
-        float: right;
-        width: 24px;
-        margin: 7px 0px 0 22px;
-    }
-    #flag {
-        height: 15px;
-        .white-border();        
-    }
+        padding-top: 10px;
+        font-size: 14px;
+        .middle-size({
+            width: 620px;
+            padding-top: 20px;
+        });
+        .login_btn {
+            float: right;
+            margin-top: 5px;
+            padding: 7px 33px;
+            .white-border();
+            text-decoration: none;
+            user-select: none;
+            .middle-size({
+                margin-top: 9px;
+                padding: 5px 24px;
+                font-size: 11px;
+            });
+        }
+        .fl {
+            float: right;
+            width: 24px;
+            margin: 7px 0px 0 22px;
+            .middle-size({
+                margin: 8px 10px 0 22px;
+            });
+        }
+        #flag {
+            height: 15px;
+            .white-border(); 
+            .middle-size({
+                height: 12px;
+            });      
+        }
+    }    
     .second {
-        width: 950px;
+        width: 958px;
         margin: 0 auto;
         margin-top: 80px;
         margin-bottom: 28px;
-        padding: 4px 0 136px 10px;
+        padding: 16px 0 110px 10px;
         color: #fff;
+        .middle-size({
+            width: 620px;
+            margin-top: 45px;
+        });
         p {
             font-size: 18px;
+            .middle-size({
+                font-size: 14px;
+                margin: 9px 0 0 0;
+            });
             &::after {
                 content: '';
                 display: block;
@@ -82,6 +113,13 @@ header {
         }
         .second-header {
             font-size: 36px;
+            position: relative;
+            top: -10px;
+            .middle-size({
+                position: relative;
+                top: -18px;
+                font-size: 26px;
+            });
         }
     }
 }
@@ -95,6 +133,10 @@ header {
     border-radius: 3px;
     background: #fff;
     font-size: 15px;
+    .middle-size({
+        width: 618px;
+        height: 196px;
+    });
     input[type="text"] {
         position: relative;
         width: 272px;
@@ -104,6 +146,9 @@ header {
         border: 1px solid #bdbdbd;      //!!!12
         border-right: none;
         font-size: 14px;
+        .middle-size({
+            width: 231px;
+        });
     }
     a {
         position: relative;
@@ -116,6 +161,9 @@ header {
         opacity: 0.5;
         color: #fff;
         text-decoration: none;
+        .middle-size({
+            padding: 13px 56px 15px;
+        });
         &:hover {
             background: #fd6a46;
         }
@@ -126,6 +174,12 @@ header {
         top: 36px;      //!!!
         left: 50px;
         color: #333;
+        .middle-size({
+            top: 53px;
+            left: 28px;
+            white-space: nowrap;
+            font-size: 13px;
+        });
     }
     a.webs {
         margin: 0 10px 0 0;
@@ -133,21 +187,34 @@ header {
         background: #fff;
         box-shadow: 0px 2px 2px #c4c9cc;
         &.Google {
-            padding: 13px 3px 15px 45px;
+            padding: 13px 3px 16px 45px;
             background: url('Images/Google24.png') no-repeat 10px center;
             background-size: 18px;            
             color: #555;
             font-family: 'Roboto',sans-serif;
+            .middle-size({
+                top: 52px;
+                margin: 0px 10px 0 -18px;
+                padding: 12px 4px 12px 44px;
+            });
         }
         &.Facebook {
             padding: 12px 30px 15px 11px;
             background: url('Images/Facebook-49x100.png') no-repeat 15px center;
             background-size: 10px;
+            .middle-size({
+                top: 48px;
+                padding: 6px 30px 15px 11px;
+            });
         }
         &.LinkedIn {
             padding: 12px 35px 15px 11px;
             background: url('Images/linkedin.png') no-repeat 13px center;
             background-size: 19px;
+            .middle-size({
+                top: 48px;
+                padding: 6px 35px 15px 11px;
+            });
         }
     }
     div {
@@ -184,6 +251,9 @@ header {
                 box-sizing: border-box;
                 display: block;
                 left: 0;
+                .middle-size({
+                    top: 36px;
+                });
             }
             &:checked+span::before {
                 content: '';
@@ -201,9 +271,16 @@ header {
         label {
             position: absolute;
             top: -38px;
+            .middle-size({
+                top: -14px; 
+            });
         }
         .chk-accept {
             top:-14px;
+            .middle-size({
+                position: absolute;
+                top: 12px;
+            });
         }
     }
 }
@@ -217,41 +294,65 @@ header {
 .gray {
     background: #f7f7f7;
 }
-    
 .orangeline {
     margin: 14px 0 50px 22px;
     width: 120px;
     height: 2px;
     background: linear-gradient(to right, #f58c73, rgba(0, 0, 0, 0));
+    .middle-size({
+        margin: 18px 0 22px 0;
+        width: 80px;
+    });
 }
 @marg20: 0 0 0 20px;
 .content {
     .w960-center();
     color: #333;
+    .middle-size({
+        width: 620px;
+    });
     .cont-header {
-        font-size: 36px;
         margin: @marg20;
         padding-top: 40px;
+        font-size: 36px;
+        .middle-size({
+            margin: 0;
+            font-size: 28px;
+        });
     }
-    .cont-subheader {
-        font-size: 24px;
+    .cont-subheader {   
         margin: @marg20;
         padding-bottom: 15px;
+        font-size: 24px;
+        .middle-size({
+            margin: 0;
+            font-size: 16px;
+        });
     }
     p {
         margin: 0 0 10px 20px;
         font-size: 15px;
+        margin: 0;
+        .middle-size({
+           font-size: 12px;
+        });
     }
     img {
         margin: 30px 0 20px 0;
         width: 100%;
         font-size: 15px;
+        .middle-size({
+            margin: 30px 0 16px 0;
+        });
     }
 }
 .threept {
     display: inline-block;
     margin-top: 60px;
-}
+    .middle-size({
+        margin-top: 38px;
+    });
+    }
 .pictext {
     width: 33%;
     float: left;
@@ -260,9 +361,16 @@ header {
         display: block;
         margin: 0 auto;
         width: 80px;
+        .middle-size({
+            width: 68px;
+        });
     }
     div {
         padding: 30px 25px;
+        .middle-size({
+            padding: 30px 20px;
+            font-size: 12px;
+        });
     }
 }
 .smallp {
@@ -270,11 +378,14 @@ header {
     padding-bottom: 10px;
 }
 .longpic {
-    margin: margin: 35px 0 25px 0;
+    margin: 35px 0 25px 0;
 }
 .textlink {
     display: inline-block;
     margin-left: 21px;
+    .middle-size({
+        margin: 0;
+    });
     a:hover {
         text-decoration: none;
     }
@@ -290,17 +401,29 @@ header {
     }
     &:last-child p{
         margin: 0 50px 10px 0;
+        .middle-size({
+            margin: 10px 24px 0 0;
+        });
     }
     img {
         width: 120px;
         margin: 20px 20px 50px 1px;
+        .middle-size({
+            width: 86px;
+            margin: 10px 0 4px 0;
+        });
     }
     p{
-        margin: 0 65px 10px 0;        
+        margin: 0 65px 10px 0;
+        .middle-size({
+            margin: 10px 36px 10px 0;
+        });
     }
     .textli-h {
         font-size: 25px;
-        margin: 0 0 15px 0;
+        .middle-size({
+            font-size: 18px;
+        });
     }
 }
 footer {
@@ -310,16 +433,28 @@ footer {
     padding: 25px 0 20px 0;
     background: #f7f7f7;
     font-size: 12px;
+    .middle-size({
+        font-size: 10px;
+    });
     div:only-child {
         position: relative;
         .w960-center();
+        .middle-size({
+            width: 620px;
+        });
     }
     a {
         color: #000;
         margin-right: 25px;
         text-decoration: none;
+        .middle-size({
+            margin-right: 10px;
+        });
         &:first-child {
             margin-left: 20px;
+            .middle-size({
+                margin-left: 0;
+            });
         }
         &:hover {
             text-decoration: underline;
@@ -336,6 +471,9 @@ footer {
         margin-right: 50px;
         display: inline-block;
         float: left;
+        .middle-size({
+            margin-right: 46px;
+        });
     }
     .inst {
         position: absolute;
@@ -343,5 +481,8 @@ footer {
         display: inline-block;
         margin-right: 26px;
         max-width: 24px;
+        .middle-size({
+            margin-right: 10px;
+        });
     }
 }
