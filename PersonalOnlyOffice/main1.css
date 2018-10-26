@@ -15,6 +15,14 @@ header {
 @media (max-width: 1040px) {
   header {
     background-size: cover;
+    background-position-x: right;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    height: 500px;
+    background-size: cover;
+    background-position-x: 80%;
   }
 }
 header .topdiv {
@@ -29,6 +37,22 @@ header .topdiv {
     padding-top: 20px;
   }
 }
+@media (max-width: 767px) {
+  header .topdiv {
+    width: 318px;
+  }
+}
+@media (max-width: 1040px) {
+  header .topdiv .logo img {
+    width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  header .topdiv .logo img {
+    width: 130px;
+    margin-right: -10px;
+  }
+}
 header .topdiv .login_btn {
   float: right;
   margin-top: 5px;
@@ -41,9 +65,15 @@ header .topdiv .login_btn {
 }
 @media (max-width: 1040px) {
   header .topdiv .login_btn {
-    margin-top: 9px;
+    margin-top: 7px;
     padding: 5px 24px;
     font-size: 11px;
+  }
+}
+@media (max-width: 767px) {
+  header .topdiv .login_btn {
+    margin-top: 3px;
+    margin-right: -10px;
   }
 }
 header .topdiv .fl {
@@ -53,7 +83,12 @@ header .topdiv .fl {
 }
 @media (max-width: 1040px) {
   header .topdiv .fl {
-    margin: 8px 10px 0 22px;
+    margin: 6px 10px 0 22px;
+  }
+}
+@media (max-width: 767px) {
+  header .topdiv .fl {
+    margin: 4px 0 0 22px;
   }
 }
 header .topdiv #flag {
@@ -78,7 +113,12 @@ header .second {
 @media (max-width: 1040px) {
   header .second {
     width: 620px;
-    margin-top: 45px;
+    margin-top: 38px;
+  }
+}
+@media (max-width: 767px) {
+  header .second {
+    width: 318px;
   }
 }
 header .second p {
@@ -86,8 +126,9 @@ header .second p {
 }
 @media (max-width: 1040px) {
   header .second p {
-    font-size: 14px;
+    font-size: 13px;
     margin: 9px 0 0 0;
+    white-space: nowrap;
   }
 }
 header .second p::after {
@@ -123,8 +164,13 @@ header .second .second-header {
 @media (max-width: 1040px) {
   header .second .second-header {
     position: relative;
-    top: -18px;
-    font-size: 26px;
+    top: -16px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  header .second .second-header {
+    display: table-caption;
   }
 }
 #stickydiv {
@@ -142,6 +188,14 @@ header .second .second-header {
   #stickydiv {
     width: 618px;
     height: 196px;
+    margin-top: -120px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv {
+    width: 318px;
+    height: 363px;
   }
 }
 #stickydiv input[type="text"] {
@@ -157,6 +211,13 @@ header .second .second-header {
 @media (max-width: 1040px) {
   #stickydiv input[type="text"] {
     width: 231px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv input[type="text"] {
+    width: 236px;
+    left: 20px;
+    border: 1px solid #bdbdbd;
   }
 }
 #stickydiv a {
@@ -176,29 +237,52 @@ header .second .second-header {
     padding: 13px 56px 15px;
   }
 }
+@media (max-width: 767px) {
+  #stickydiv a {
+    left: 20px;
+    top: 72px;
+    padding: 13px 50px 15px;
+  }
+}
 #stickydiv a:hover {
   background: #fd6a46;
 }
-#stickydiv span {
+#stickydiv p {
   position: relative;
-  margin: 0 44px 0 0;
-  top: 36px;
-  left: 50px;
+  margin: 0;
+  left: 590px;
+  width: 80px;
   color: #333;
 }
 @media (max-width: 1040px) {
-  #stickydiv span {
-    top: 53px;
+  #stickydiv p {
+    top: 57px;
     left: 28px;
     white-space: nowrap;
     font-size: 13px;
   }
 }
+@media (max-width: 767px) {
+  #stickydiv p {
+    top: 106px;
+    left: 20px;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+}
 #stickydiv a.webs {
+  top: -20px;
+  left: 690px;
   margin: 0 10px 0 0;
   border-radius: 3px;
   background: #fff;
   box-shadow: 0px 2px 2px #c4c9cc;
+}
+@media (max-width: 1040px) {
+  #stickydiv a.webs {
+    top: -25px;
+    left: 128px;
+  }
 }
 #stickydiv a.webs.Google {
   padding: 13px 3px 16px 45px;
@@ -209,8 +293,15 @@ header .second .second-header {
 }
 @media (max-width: 1040px) {
   #stickydiv a.webs.Google {
-    top: 52px;
+    top: 38px;
     margin: 0px 10px 0 -18px;
+    padding: 12px 4px 12px 44px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv a.webs.Google {
+    top: 124px;
+    margin: 0 11px 0 -110px;
     padding: 12px 4px 12px 44px;
   }
 }
@@ -221,7 +312,13 @@ header .second .second-header {
 }
 @media (max-width: 1040px) {
   #stickydiv a.webs.Facebook {
-    top: 48px;
+    top: 34px;
+    padding: 6px 30px 15px 11px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv a.webs.Facebook {
+    top: 120px;
     padding: 6px 30px 15px 11px;
   }
 }
@@ -232,7 +329,13 @@ header .second .second-header {
 }
 @media (max-width: 1040px) {
   #stickydiv a.webs.LinkedIn {
-    top: 48px;
+    top: 34px;
+    padding: 6px 35px 15px 11px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv a.webs.LinkedIn {
+    top: 120px;
     padding: 6px 35px 15px 11px;
   }
 }
@@ -241,12 +344,33 @@ header .second .second-header {
   top: 52px;
   left: 28px;
 }
+@media (max-width: 1040px) {
+  #stickydiv div {
+    position: relative;
+    top: 70px;
+    left: 28px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv div {
+    position: relative;
+    top: 170px;
+    left: 20px;
+  }
+}
 #stickydiv div p {
   position: absolute;
-  top: 24px;
+  top: 0;
   left: 26px;
   font-size: 12px;
   white-space: nowrap;
+}
+@media (max-width: 767px) {
+  #stickydiv div p {
+    top: 0;
+    width: 240px;
+    white-space: normal;
+  }
 }
 #stickydiv div p a {
   top: 0;
@@ -298,6 +422,11 @@ header .second .second-header {
     top: -14px;
   }
 }
+@media (max-width: 767px) {
+  #stickydiv div label {
+    top: -14px;
+  }
+}
 #stickydiv div .chk-accept {
   top: -14px;
 }
@@ -305,6 +434,12 @@ header .second .second-header {
   #stickydiv div .chk-accept {
     position: absolute;
     top: 12px;
+  }
+}
+@media (max-width: 767px) {
+  #stickydiv div .chk-accept {
+    position: absolute;
+    top: 22px;
   }
 }
 .white:first-of-type {
@@ -333,6 +468,11 @@ header .second .second-header {
 @media (max-width: 1040px) {
   .content {
     width: 620px;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    width: 320px;
   }
 }
 .content .cont-header {
@@ -391,6 +531,11 @@ header .second .second-header {
   float: left;
   font-size: 15px;
 }
+@media (max-width: 767px) {
+  .pictext {
+    width: 100%;
+  }
+}
 .pictext img {
   display: block;
   margin: 0 auto;
@@ -408,6 +553,12 @@ header .second .second-header {
   .pictext div {
     padding: 30px 20px;
     font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .pictext div {
+    padding: 30px 0;
+    font-size: 15px;
   }
 }
 .smallp {
@@ -435,6 +586,11 @@ header .second .second-header {
 .textli {
   max-width: 33%;
   float: left;
+}
+@media (max-width: 767px) {
+  .textli {
+    max-width: 100%;
+  }
 }
 .textli > a {
   text-decoration: none;
@@ -465,6 +621,11 @@ header .second .second-header {
     margin: 10px 36px 10px 0;
   }
 }
+@media (max-width: 767px) {
+  .textli p {
+    font-size: 15px;
+  }
+}
 .textli .textli-h {
   font-size: 25px;
 }
@@ -483,7 +644,13 @@ footer {
 }
 @media (max-width: 1040px) {
   footer {
+    padding: 60px 0 15px 0;
     font-size: 10px;
+  }
+}
+@media (max-width: 767px) {
+  footer div {
+    width: 320px;
   }
 }
 footer div:only-child {
@@ -496,33 +663,52 @@ footer div:only-child {
     width: 620px;
   }
 }
-footer a {
+@media (max-width: 767px) {
+  footer div:only-child {
+    width: 320px;
+    font-size: 12px;
+  }
+}
+footer div a {
   color: #000;
   margin-right: 25px;
   text-decoration: none;
 }
 @media (max-width: 1040px) {
-  footer a {
+  footer div a {
     margin-right: 10px;
   }
 }
-footer a:first-child {
+@media (max-width: 767px) {
+  footer div a {
+    position: absolute;
+    left: 197px;
+    top: -40px;
+    width: 100px;
+  }
+}
+footer div a:first-child {
   margin-left: 20px;
 }
 @media (max-width: 1040px) {
-  footer a:first-child {
+  footer div a:first-child {
     margin-left: 0;
   }
 }
-footer a:hover {
+@media (max-width: 767px) {
+  footer div a:first-child {
+    left: 0;
+  }
+}
+footer div a:hover {
   text-decoration: underline;
 }
-footer .copyr {
+footer div .copyr {
   display: inline-block;
   float: right;
   white-space: nowrap;
 }
-footer .frights {
+footer div .copyr .frights {
   padding: 0;
   color: #000;
   margin-right: 50px;
@@ -530,19 +716,32 @@ footer .frights {
   float: left;
 }
 @media (max-width: 1040px) {
-  footer .frights {
+  footer div .copyr .frights {
     margin-right: 46px;
   }
 }
-footer .inst {
+@media (max-width: 767px) {
+  footer div .copyr .frights {
+    margin-top: 8px;
+    margin-right: 32px;
+  }
+}
+footer div .copyr .inst {
   position: absolute;
-  right: 0;
   display: inline-block;
+  right: 0;
   margin-right: 26px;
-  max-width: 24px;
+  width: 24px;
 }
 @media (max-width: 1040px) {
-  footer .inst {
+  footer div .copyr .inst {
     margin-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  footer div .copyr .inst a {
+    width: 16px;
+    top: 8px;
+    left: 18px;
   }
 }

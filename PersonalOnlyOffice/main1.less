@@ -30,6 +30,12 @@ header {
     background: url('Images/shutterstoke.jpg') no-repeat center 0;
     .middle-size({
         background-size: cover;
+        background-position-x: right;
+    });
+    .small-size({
+        height: 500px;
+        background-size: cover;
+        background-position-x: 80%;
     });
     .topdiv {
         .w960-center();
@@ -39,6 +45,20 @@ header {
             width: 620px;
             padding-top: 20px;
         });
+        .small-size({
+            width: 318px;
+        });
+        .logo {
+            img {
+                .middle-size({
+                    width: 150px;
+                });
+                .small-size({
+                    width: 130px;
+                    margin-right: -10px;
+                });
+            }
+        }
         .login_btn {
             float: right;
             margin-top: 5px;
@@ -47,9 +67,13 @@ header {
             text-decoration: none;
             user-select: none;
             .middle-size({
-                margin-top: 9px;
+                margin-top: 7px;
                 padding: 5px 24px;
                 font-size: 11px;
+            });
+            .small-size({
+                margin-top: 3px;
+                margin-right: -10px;
             });
         }
         .fl {
@@ -57,7 +81,10 @@ header {
             width: 24px;
             margin: 7px 0px 0 22px;
             .middle-size({
-                margin: 8px 10px 0 22px;
+                margin: 6px 10px 0 22px;
+            });
+            .small-size({
+                margin: 4px 0 0 22px;
             });
         }
         #flag {
@@ -77,13 +104,17 @@ header {
         color: #fff;
         .middle-size({
             width: 620px;
-            margin-top: 45px;
+            margin-top: 38px;
+        });
+        .small-size({
+            width: 318px;
         });
         p {
             font-size: 18px;
             .middle-size({
-                font-size: 14px;
+                font-size: 13px;
                 margin: 9px 0 0 0;
+                white-space: nowrap; //????????????????
             });
             &::after {
                 content: '';
@@ -117,9 +148,12 @@ header {
             top: -10px;
             .middle-size({
                 position: relative;
-                top: -18px;
-                font-size: 26px;
+                top: -16px;
+                font-size: 25px;
             });
+            .small-size({
+                display: table-caption;
+            })
         }
     }
 }
@@ -136,6 +170,12 @@ header {
     .middle-size({
         width: 618px;
         height: 196px;
+        margin-top: -120px;
+        margin-bottom: 10px;
+    });
+    .small-size({
+        width: 318px;
+        height: 363px;
     });
     input[type="text"] {
         position: relative;
@@ -148,6 +188,11 @@ header {
         font-size: 14px;
         .middle-size({
             width: 231px;
+        });
+        .small-size({
+            width: 236px;
+            left: 20px;
+            border: 1px solid #bdbdbd;
         });
     }
     a {
@@ -164,28 +209,45 @@ header {
         .middle-size({
             padding: 13px 56px 15px;
         });
+        .small-size({
+            left: 20px;
+            top: 72px;
+            padding: 13px 50px 15px;
+        });
         &:hover {
             background: #fd6a46;
         }
     }
-    span {
+    p {
         position: relative;
-        margin: 0 44px 0 0;
-        top: 36px;      //!!!
-        left: 50px;
+        margin: 0;
+        left: 590px;
+        width: 80px;
         color: #333;
         .middle-size({
-            top: 53px;
+            top: 57px;
             left: 28px;
             white-space: nowrap;
             font-size: 13px;
         });
+        .small-size({
+            top: 106px;
+            left: 20px;
+            white-space: nowrap;
+            font-size: 18px;
+        });
     }
     a.webs {
+        top: -20px;
+        left: 690px;
         margin: 0 10px 0 0;
         border-radius: 3px;
         background: #fff;
         box-shadow: 0px 2px 2px #c4c9cc;
+        .middle-size({
+            top: -25px;
+            left: 128px;
+        });
         &.Google {
             padding: 13px 3px 16px 45px;
             background: url('Images/Google24.png') no-repeat 10px center;
@@ -193,8 +255,13 @@ header {
             color: #555;
             font-family: 'Roboto',sans-serif;
             .middle-size({
-                top: 52px;
+                top: 38px;
                 margin: 0px 10px 0 -18px;
+                padding: 12px 4px 12px 44px;
+            });
+            .small-size({
+                top: 124px;
+                margin: 0 11px 0 -110px;
                 padding: 12px 4px 12px 44px;
             });
         }
@@ -203,7 +270,11 @@ header {
             background: url('Images/Facebook-49x100.png') no-repeat 15px center;
             background-size: 10px;
             .middle-size({
-                top: 48px;
+                top: 34px;
+                padding: 6px 30px 15px 11px;
+            });
+            .small-size({
+                top: 120px;
                 padding: 6px 30px 15px 11px;
             });
         }
@@ -212,7 +283,11 @@ header {
             background: url('Images/linkedin.png') no-repeat 13px center;
             background-size: 19px;
             .middle-size({
-                top: 48px;
+                top: 34px;
+                padding: 6px 35px 15px 11px;
+            });
+            .small-size({
+                top: 120px;
                 padding: 6px 35px 15px 11px;
             });
         }
@@ -221,12 +296,27 @@ header {
         position: relative;
         top: 52px;
         left: 28px;
+        .middle-size({
+            position: relative;
+            top: 70px;
+            left: 28px;
+        });
+        .small-size({
+            position: relative;
+            top: 170px;
+            left: 20px;
+        });
         p {
             position: absolute;
-            top: 24px;
+            top: 0;
             left: 26px;
             font-size: 12px;
             white-space: nowrap;
+            .small-size({
+                top: 0;
+                width: 240px;
+                white-space: normal;
+            });
             a {
                 top: 0;
                 left: 0;
@@ -274,6 +364,9 @@ header {
             .middle-size({
                 top: -14px; 
             });
+            .small-size({
+                top: -14px;
+            })
         }
         .chk-accept {
             top:-14px;
@@ -281,11 +374,13 @@ header {
                 position: absolute;
                 top: 12px;
             });
+            .small-size({
+                position: absolute;
+                top: 22px;
+            });
         }
     }
 }
-
-
 .white {
     &:first-of-type {
          margin-top: 100px;
@@ -310,6 +405,9 @@ header {
     color: #333;
     .middle-size({
         width: 620px;
+    });
+    .small-size({
+        width: 320px;
     });
     .cont-header {
         margin: @marg20;
@@ -357,6 +455,9 @@ header {
     width: 33%;
     float: left;
     font-size: 15px;
+    .small-size({
+        width: 100%;
+    });
     img {
         display: block;
         margin: 0 auto;
@@ -370,6 +471,10 @@ header {
         .middle-size({
             padding: 30px 20px;
             font-size: 12px;
+        });
+        .small-size({
+            padding: 30px 0;
+            font-size: 15px;
         });
     }
 }
@@ -396,6 +501,9 @@ header {
 .textli {
     max-width: 33%;
     float: left;
+    .small-size({
+        max-width: 100%;
+    });
     & > a {
         text-decoration: none;
     }
@@ -418,6 +526,9 @@ header {
         .middle-size({
             margin: 10px 36px 10px 0;
         });
+        .small-size({
+            font-size: 15px;
+        });
     }
     .textli-h {
         font-size: 25px;
@@ -434,55 +545,88 @@ footer {
     background: #f7f7f7;
     font-size: 12px;
     .middle-size({
+        padding: 60px 0 15px 0;
         font-size: 10px;
     });
-    div:only-child {
-        position: relative;
-        .w960-center();
-        .middle-size({
-            width: 620px;
+    div {
+        .small-size({
+            width: 320px;
         });
-    }
-    a {
-        color: #000;
-        margin-right: 25px;
-        text-decoration: none;
-        .middle-size({
-            margin-right: 10px;
-        });
-        &:first-child {
-            margin-left: 20px;
+        &:only-child {
+            position: relative;
+            .w960-center();
             .middle-size({
-                margin-left: 0;
+                width: 620px;
+            });
+            .small-size({
+                width: 320px;
+                font-size: 12px;
             });
         }
-        &:hover {
-            text-decoration: underline;
+        a {
+            color: #000;
+            margin-right: 25px;
+            text-decoration: none;
+            .middle-size({
+                margin-right: 10px;
+            });
+            .small-size({
+                position: absolute;
+                left: 197px;
+                top: -40px;
+                width: 100px;
+            });
+            &:first-child {
+                margin-left: 20px;
+                .middle-size({
+                    margin-left: 0;
+                });
+                .small-size({
+                    left: 0;
+                });
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .copyr {
+            display: inline-block;
+            float: right;
+            white-space: nowrap;
+            .frights {
+                padding: 0;
+                color: #000;
+                margin-right: 50px;
+                display: inline-block;
+                float: left;
+                .middle-size({
+                    margin-right: 46px;
+                });
+                .small-size({
+                    margin-top: 8px;
+                    margin-right: 32px;
+                });
+            }
+            .inst {
+                position: absolute;
+                display: inline-block;
+                right: 0;
+                margin-right: 26px;
+                width: 24px;
+                .middle-size({
+                    margin-right: 10px;
+                });
+                a {
+                    .small-size({
+                        width: 16px;
+                        top: 8px;
+                        left: 18px;
+                    });
+                }
+            }
         }
     }
-    .copyr {
-        display: inline-block;
-        float: right;
-        white-space: nowrap;
-    }
-    .frights {
-        padding: 0;
-        color: #000;
-        margin-right: 50px;
-        display: inline-block;
-        float: left;
-        .middle-size({
-            margin-right: 46px;
-        });
-    }
-    .inst {
-        position: absolute;
-        right: 0;
-        display: inline-block;
-        margin-right: 26px;
-        max-width: 24px;
-        .middle-size({
-            margin-right: 10px;
-        });
-    }
+    
+    
+    
 }
