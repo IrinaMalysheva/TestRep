@@ -27,7 +27,8 @@ body {
 }
 header {
     background: #8e9faf;
-    background: url('Images/shutterstoke.jpg') no-repeat center 0;
+    background: url('Images/shutterstoke.jpg') no-repeat;
+    background-size: cover;
     .middle-size({
         background-size: cover;
         background-position-x: right;
@@ -100,7 +101,7 @@ header {
         margin: 0 auto;
         margin-top: 80px;
         margin-bottom: 28px;
-        padding: 16px 0 110px 10px;
+        padding: 16px 0 137px 10px;
         color: #fff;
         .middle-size({
             width: 620px;
@@ -111,21 +112,43 @@ header {
         });
         p {
             font-size: 18px;
+            position: relative;
+            margin-left: 30px;
+            padding: 3px 0;
             .middle-size({
-                font-size: 13px;
-                margin: 9px 0 0 0;
-                white-space: nowrap; //????????????????
+                font-size: 14px;
+                margin: 9px 0 0 24px;
             });
             &::after {
                 content: '';
+                position: absolute;
+                top: 26px;
+                left: -26px;
                 display: block;
                 width: 1px;
-                height: 34px;
+                height: 39px;
                 margin: -5px 0px -23px 6px;
                 background: #f26341;
+                z-index: 1;
+                .middle-size({
+                    top: 22px;
+                    left: -25px;
+                    height: 27px;
+                });
+                .small-size({
+                    top: 22px;
+                    left: -25px;
+                    height: 27px;
+                });
             }
+            &:first-of-type::after {
+                height: 45px;
+            }        
             &::before {
                 content: '';
+                position: absolute;
+                left: -26px;
+                top: 10px;
                 display: inline-block;
                 width: 9px;
                 height: 9px;
@@ -136,6 +159,12 @@ header {
                 background: #f26341;
                 border: 2px solid #b36840;
                 margin: 0px 12px 0 0;
+                .middle-size({
+                    left: -24px;
+                    top: 8px;
+                    width: 7px;
+                    height: 7px;
+                });
             }
             &:last-child:after {
                 content: '';
@@ -149,10 +178,11 @@ header {
             .middle-size({
                 position: relative;
                 top: -16px;
-                font-size: 25px;
+                font-size: 24px;
             });
             .small-size({
                 display: table-caption;
+                font-size: 26px;
             })
         }
     }
@@ -161,7 +191,7 @@ header {
     width: 958px;
     height: 150px;
     margin: 0 auto;
-    margin-top: -100px;
+    margin-top: -130px;
     margin-bottom: 40px;
     border: 1px solid #bebebe;      //!!!12
     border-radius: 3px;
@@ -216,6 +246,10 @@ header {
         });
         &:hover {
             background: #fd6a46;
+        }
+        @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            /* IE10 IE11 */
+            padding: 12px 56px 15px;
         }
     }
     p {
@@ -381,6 +415,11 @@ header {
         }
     }
 }
+@-moz-document url-prefix() {
+    #stickydiv a {
+        padding: 14px 20px 15px;
+    }
+} 
 .white {
     &:first-of-type {
          margin-top: 100px;
@@ -620,7 +659,7 @@ footer {
                     .small-size({
                         width: 16px;
                         top: 8px;
-                        left: 18px;
+                        left: 16px;
                     });
                 }
             }
