@@ -201,7 +201,7 @@ header {
     border: 1px solid #bebebe;      //!!!12
     border-radius: 3px;
     background: #fff;
-    font-size: 15px;
+    font-size: 14px;
     .middle-size({
         width: 618px;
         height: 196px;
@@ -211,12 +211,15 @@ header {
     .small-size({
         width: 318px;
         height: 363px;
+        margin-top: -108px;
     });
     input[type="text"] {
-        position: relative;
+        /*position: relative;
+        top: 36px; 
+        left: 28px;*/
         width: 272px;
-        top: 36px;      //!!!
-        left: 28px;
+        height: 16px;
+        margin: 42px 0 0 30px;
         padding: 15px 20px;
         border: 1px solid #bdbdbd;      //!!!12
         border-right: none;
@@ -225,128 +228,110 @@ header {
             width: 231px;
         });
         .small-size({
-            width: 236px;
+            width: 216px;
             left: 20px;
             border: 1px solid #bdbdbd;
         });
     }
     a {
-        position: relative;
-        width: 200px;
-        top: 36px;      //!!!
-        left: 24px;
-        padding: 13px 20px 15px;
-        border: none;
-        background: #f16240;
         opacity: 0.5;
-        color: #fff;
         text-decoration: none;
-        .middle-size({
-            padding: 13px 56px 15px;
-        });
-        .small-size({
-            left: 20px;
-            top: 72px;
-            padding: 13px 50px 15px;
-        });
-        &:hover {
-            background: #fd6a46;
-        }
-        @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            /* IE10 IE11 */
-            padding: 12px 56px 15px;
-        }
-    }
-    p {
-        position: relative;
-        margin: 0;
-        left: 590px;
-        width: 80px;
-        color: #333;
-        .middle-size({
-            top: 57px;
-            left: 28px;
-            white-space: nowrap;
-            font-size: 13px;
-        });
-        .small-size({
-            top: 106px;
-            left: 20px;
-            white-space: nowrap;
-            font-size: 18px;
-        });
-    }
-    a.webs {
-        top: -20px;
-        left: 690px;
-        margin: 0 10px 0 0;
-        border-radius: 3px;
-        background: #fff;
-        box-shadow: 0px 2px 2px #c4c9cc;
-        .middle-size({
-            top: -25px;
-            left: 128px;
-        });
-        &.Google {
-            padding: 13px 3px 15px 45px;
-            background: url('Images/Google24.png') no-repeat 10px center;
-            background-size: 18px;            
-            color: #555;
-            font-family: 'Roboto',sans-serif;
-            .darkshadow();
+        &#startedit {
+            background: #f16240;
+            color: #fff;
+            margin-left: -4px;
+            padding: 13px 24px 15px;
+            font-size: 15px;
+            &:hover {
+                background: #fd6a46;
+            }
+            &:active {
+                background: #e65836;
+            }
             .middle-size({
-                top: 38px;
-                margin: 0px 10px 0 -18px;
-                padding: 12px 4px 12px 44px;
+                padding: 13px 54px 15px;
             });
             .small-size({
-                top: 124px;
-                margin: 0 11px 0 -110px;
-                padding: 12px 4px 12px 44px;
+                position: relative;
+                top: 29px;
+                margin-left: 30px;
+                padding: 13px 40px 15px;
             });
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                padding: 12px 24px 15px;
+            }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                .middle-size({padding: 12px 50px 15px;});
+            }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                .small-size({padding: 13px 36px 15px;});
+            }
         }
-        &.Facebook {
-            padding: 12px 30px 15px 11px;
-            background: url('Images/Facebook-49x100.png') no-repeat 15px center;
-            background-size: 10px;
+        &.webs {
+            display: inline-block;
+            position: relative;
+            top: -68px;
+            left: 686px;
+            margin-right: 10px;
+            border-radius: 3px;
+            box-shadow: 0px 2px 2px #c4c9cc;
             .darkshadow();
             .middle-size({
-                top: 34px;
-                padding: 6px 30px 15px 11px;
+                top: -10px;
+                left: 106px;
             });
             .small-size({
-                top: 120px;
-                padding: 6px 30px 15px 11px;
+                left: 32px;
+                top: 68px;
             });
-        }
-        &.LinkedIn {
-            padding: 12px 35px 15px 11px;
-            background: url('Images/linkedin.png') no-repeat 13px center;
-            background-size: 19px;
-            .darkshadow();
-            .middle-size({
-                top: 34px;
-                padding: 6px 35px 15px 11px;
-            });
-            .small-size({
-                top: 120px;
-                padding: 6px 35px 15px 11px;
-            });
+            &.Google {
+                padding: 13px 3px 16px 45px;
+                background: url('Images/Google24.png') no-repeat 10px center;
+                background-size: 18px;            
+                color: #555;
+                font-family: 'Roboto',sans-serif;
+                .middle-size({
+                    padding: 12px 4px 12px 44px;
+                });
+                .small-size({
+                    padding: 12px 4px 12px 44px;
+                });
+            }
+            &.Facebook {
+                padding: 12px 30px 15px 11px;
+                background: url('Images/Facebook-49x100.png') no-repeat 15px center;
+                background-size: 10px;
+                .middle-size({
+                    padding: 7px 31px 11px 10px;
+                });
+                .small-size({
+                    padding-top: 6px;
+                });
+            }
+            &.LinkedIn {
+                padding: 12px 35px 15px 11px;
+                background: url('Images/linkedin.png') no-repeat 13px center;
+                background-size: 19px;
+                .middle-size({
+                    padding: 7px 33px 11px 10px;
+                });
+                .small-size({
+                    padding-top: 6px;
+                });
+            }
         }
     }
     div {
         position: relative;
-        top: 52px;
+        top: -15px;
         left: 28px;
         .middle-size({
-            position: relative;
-            top: 70px;
+            top: 12px;
             left: 28px;
         });
         .small-size({
-            position: relative;
-            top: 170px;
-            left: 20px;
+            top: 108px;
+            left: 32px;
         });
         p {
             position: absolute;
@@ -355,7 +340,7 @@ header {
             font-size: 12px;
             white-space: nowrap;
             .small-size({
-                top: 0;
+                top: -2px;
                 width: 240px;
                 white-space: normal;
             });
@@ -366,7 +351,6 @@ header {
                 background: none;
                 color: #f16240;
                 opacity: 0.9;
-
             }
             &:hover {
                 background: none;
@@ -391,11 +375,11 @@ header {
                 content: '';
                 position: absolute;
                 display: block;
-                left: 3px;
-                top: -2px;
+                left: 4px;
+                top: -1px;
                 width: 5px;
                 height: 12px;
-                border: 1px solid #333;
+                border: 1px solid #000;
                 border-width: 0 1px 1px 0;    
                 transform: rotateZ(45deg);
             }
@@ -422,10 +406,36 @@ header {
             });
         }
     }
+    p {
+        position: relative;
+        margin: 0;
+        top: -34px;
+        left: 593px;
+        width: 80px;
+        color: #333;
+        white-space: nowrap;
+        font-size: 15px;
+        .middle-size({
+            top: 18px;
+            left: 28px;
+            font-size: 13px;
+        });
+        .small-size({    
+            top: 54px;
+            left: 29px;
+            font-size: 18px;
+        });
+    }
 }
 @-moz-document url-prefix() {
     #stickydiv a {
         padding: 14px 20px 15px;
+        .middle-size({
+            padding: 14px 55px 15px;
+        });
+        .small-size({
+            padding: 14px 50px 15px;
+        });
     }
 } 
 .white {
