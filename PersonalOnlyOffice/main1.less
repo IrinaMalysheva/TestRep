@@ -22,6 +22,26 @@
     color: #fff;
     border-radius: 2px;
 }
+.btn-prev-next() {
+    background: transparent;
+    border: none;
+    position: relative;
+    top: -175px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    outline: none;
+}
+.btn-prev-next-after() {
+    content: '';
+    display: block;
+    position: relative;
+    height: 22px;
+    width: 22px;
+    border: 2px solid #bdbdbd;
+    transform: rotate(45deg);
+    z-index: 1;
+}
 html {
     .mp0();
     font-family: 'Open Sans', Verdana, sans-serif;
@@ -207,6 +227,7 @@ html {
             border-radius: 3px;
             background: #fff;
             font-size: 14px;
+            z-index: 2;
             .middle-size({
                 width: 618px;
                 height: 196px;
@@ -457,6 +478,96 @@ html {
             .small-size({
                 width: 320px;
             });
+            .carousel-collaborate {
+                margin-top: 60px;
+                .slick-slide {
+                    height: 300px;
+                    .left-side-text {
+                        display: inline-block;
+                        width: 272px;
+                        margin: 46px 56px 0 56px;
+                        vertical-align: top;
+                        .lside-head {
+                            font-size: 24px;
+                        }
+                        .lside-small-text {      
+                            margin-top: 20px;
+                            font-size: 14px;
+                            line-height: 25px;
+                        }
+                    }
+                    .right-side-image {
+                        display: inline-block;
+                        height: 300px;
+                        width: 520px;
+                    }
+                    .bgi1 {
+                        background: url('Images/share_and_collaborate_scrin_1.png') no-repeat center;
+                    }
+                    .bgi2 {
+                        background: url('Images/share_and_collaborate_scrin_2.png') no-repeat center;
+                    }.bgi3 {
+                        background: url('Images/share_and_collaborate_scrin_3.png') no-repeat center;
+                    }
+                }
+                .dots-carousel {
+                    color: #f16240;
+                    position: absolute;
+  bottom: -45px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+                    text-align: center;
+                    li {
+                        position: relative;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        margin: 0 5px;
+                        padding: 0;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            .arrows-prev-next {
+                .next-click {
+                    .btn-prev-next();
+                    left: 877px;
+                    &:after {
+                        .btn-prev-next-after();
+                        border-bottom: none;
+                        border-left: none;
+                    }
+                    &:hover {
+                        &:after {
+                            .btn-prev-next-after();
+                            border: 2px solid #f16847;
+                            border-bottom: none;
+                            border-left: none;
+                        }
+                    }
+                }
+                .prev-click {
+                    .btn-prev-next();
+                    left: 5px;
+                    overflow: visible;
+                    &:after {
+                        .btn-prev-next-after();
+                        border-top: none;
+                        border-right: none;
+                    }
+                    &:hover {
+                        &:after {
+                            .btn-prev-next-after();
+                            border: 2px solid #e65836;
+                            border-top: none;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
             .cont-header {
                 margin: @marg10;
                 padding-top: 40px;
@@ -475,20 +586,20 @@ html {
                     font-size: 16px;
                 });
             }
-            p {
-                margin: 0 0 10px 20px;
-                font-size: 15px;
-                margin: 0;
-                .middle-size({
-                   font-size: 12px;
-                });
-            }
             img {
                 margin: 30px 0 20px 0;
                 width: 100%;
                 font-size: 15px;
                 .middle-size({
                     margin: 30px 0 16px 0;
+                });
+            }
+            p {
+                margin: 0 0 10px 20px;
+                font-size: 15px;
+                margin: 0;
+                .middle-size({
+                   font-size: 12px;
                 });
             }
         }
