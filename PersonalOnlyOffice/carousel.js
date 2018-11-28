@@ -1,4 +1,25 @@
 $(document).ready(function(){
+
+    $('.carousel-create').slick({
+        // arrows: true,
+        // appendArrows: $('.arrows-create'),
+        prevArrow: '<button id="prev-cr" type="button" class="prev-click"></button>',
+        nextArrow: '<button id="next-cr" type="button" class="next-click"></button>',
+        dots: true,
+        dotsClass: "dots-carousel-create",
+    });
+
+    $('.carousel-create-head').slick({
+        arrows: false,
+        // appendArrows: $('.arrows-create'),
+        // prevArrow: '<button id="prev-cr" type="button" class="prev-click"></button>',
+        // nextArrow: '<button id="next-cr" type="button" class="next-click"></button>',
+        // dots: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     $('.carousel-collaborate').slick({
         appendArrows: $('.arrows-collaborate'),
         prevArrow: '<button id="prev-col" type="button" class="prev-click"></button>',
@@ -7,72 +28,25 @@ $(document).ready(function(){
         dotsClass: "dots-carousel",
     });
 
-    CUE = (function() {
-        
-        var choseCarUserExp = function() {
-            window.onresize = onresize;
-        }
-    
-        function onresize() {
-            if (window.innerWidth > 1040) {
-                $(function () {
-                    $(".carousel-user-exp").slick({
-                        infinite: true,
-                        slidesToShow: 2,
-                        appendArrows: $('.arrows-user-exp'),
-                        prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
-                        nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',            
-                    });
-                });
-            } else {
-                $(function () {
-                    $(".carousel-user-exp").slick({
-                        appendArrows: $('.arrows-user-exp'),
-                        prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
-                        nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',
-                    });
-                });
-            }
-        }
-    
-        return {
-            choseCarUserExp: choseCarUserExp
-        };
-    
-    })();
+    $(".carousel-user-exp").slick({
+            slidesToShow: 2,
+            infinite: true,
+            appendArrows: $('.arrows-user-exp'),
+            prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
+            nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',            
+            responsive: [
+                {
+                  breakpoint: 1041,
+                  settings: {
+                    slidesToShow: 1,
+                         }
+                }]
+    });
 
-    CUE.choseCarUserExp();
-
-    
-    // function checkbodyWidth() {
-    //     if (window.innerWidth > 1040) {
-    //         $(function () {
-    //             $(".carousel-user-exp").slick({
-    //                 infinite: true,
-    //                 slidesToShow: 2,
-    //                 appendArrows: $('.arrows-user-exp'),
-    //                 prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
-    //                 nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',            
-    //             });
-    //         });
-    //     } else {
-    //         $(function () {
-    //             $(".carousel-user-exp").slick({
-    //                 appendArrows: $('.arrows-user-exp'),
-    //                 prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
-    //                 nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',
-    //             });
-    //         });
-    //     }
-    // }
-    // //checkbodyWidth();
-    // $(window).resize(checkbodyWidth());
-
-    // $('.carousel-user-exp').slick({
-    //     infinite: true,
-    //     slidesToShow: 2,
-    //     appendArrows: $('.arrows-user-exp'),
-    //     prevArrow: '<button id="prev-cust" type="button" class="prev-click"></button>',
-    //     nextArrow: '<button id="next-cust" type="button" class="next-click"></button>',
-    // });
+    $('#next-cr').click(function(){
+        $(".carousel-create-head").slick('slickNext');
+    });
+    $('#prev-cr').click(function(){
+        $(".carousel-create-head").slick('slickPrev');
+    });
 });
