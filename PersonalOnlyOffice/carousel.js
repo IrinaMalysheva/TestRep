@@ -1,23 +1,19 @@
 $(document).ready(function(){
 
     $('.carousel-create').slick({
-        // arrows: true,
-        // appendArrows: $('.arrows-create'),
         prevArrow: '<button id="prev-cr" type="button" class="prev-click"></button>',
         nextArrow: '<button id="next-cr" type="button" class="next-click"></button>',
         dots: true,
         dotsClass: "dots-carousel-create",
+        asNavFor: '.carousel-create-head',
     });
 
     $('.carousel-create-head').slick({
         arrows: false,
-        // appendArrows: $('.arrows-create'),
-        // prevArrow: '<button id="prev-cr" type="button" class="prev-click"></button>',
-        // nextArrow: '<button id="next-cr" type="button" class="next-click"></button>',
-        // dots: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        asNavFor: '.carousel-create'
     });
 
     $('.carousel-collaborate').slick({
@@ -25,7 +21,7 @@ $(document).ready(function(){
         prevArrow: '<button id="prev-col" type="button" class="prev-click"></button>',
         nextArrow: '<button id="next-col" type="button" class="next-click"></button>',
         dots: true,
-        dotsClass: "dots-carousel",
+        dotsClass: "dots-carousel-collaborate",
     });
 
     $(".carousel-user-exp").slick({
@@ -43,10 +39,10 @@ $(document).ready(function(){
                 }]
     });
 
-    $('#next-cr').click(function(){
-        $(".carousel-create-head").slick('slickNext');
-    });
-    $('#prev-cr').click(function(){
-        $(".carousel-create-head").slick('slickPrev');
-    });
+    // $('#next-cr').click(function(){
+    //     $(".carousel-create-head").slick('slickNext');
+    // });
+    // $('#prev-cr').click(function(){
+    //     $(".carousel-create-head").slick('slickPrev');
+    // });
 });
