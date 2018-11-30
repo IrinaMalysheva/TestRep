@@ -1,43 +1,48 @@
-$(document).ready(function(){
-    var prevArrow = '<button type="button" class="prev click"></button>';
+CAROUSELS = (function() {
     var nextArrow = '<button type="button" class="next click"></button>';
+    var prevArrow = '<button type="button" class="prev click"></button>';
 
-    $('.carousel-create').slick({
-        prevArrow: prevArrow,
-        nextArrow: nextArrow,
-        dots: true,
-        dotsClass: "dots-carousel-create",
-        asNavFor: '.carousel-create-head',
-    });
-
-    $('.carousel-create-head').slick({
-        arrows: false,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        asNavFor: '.carousel-create'
-    });
-
-    $('.carousel-collaborate').slick({
-        appendArrows: $('.arrows-collaborate'),
-        prevArrow: prevArrow,
-        nextArrow: nextArrow,
-        dots: true,
-        dotsClass: "dots-carousel-collaborate",
-    });
-
-    $(".carousel-user-exp").slick({
-            slidesToShow: 2,
-            infinite: true,
-            appendArrows: $('.arrows-user-exp'),
-            prevArrow: prevArrow,
+    function init() {
+        $('.carousel-create').slick({
+            asNavFor: '.carousel-create-head',
+            dots: true,
+            dotsClass: "dots-carousel dots-carousel-create",
             nextArrow: nextArrow,
-            responsive: [
-                {
-                  breakpoint: 1041,
-                  settings: {
-                    slidesToShow: 1,
-                         }
-                }]
-    });
-});
+            prevArrow: prevArrow,
+        });
+
+        $('.carousel-create-head').slick({
+            asNavFor: '.carousel-create',
+            arrows: false,
+            cssEase: 'linear',
+            fade: true,
+            speed: 500,
+        });
+
+        $('.carousel-collaborate').slick({
+            dots: true,
+            dotsClass: "dots-carousel dots-carousel-collaborate",
+            appendArrows: $('.arrows-collaborate'),
+            nextArrow: nextArrow,
+            prevArrow: prevArrow,
+        });
+
+        $(".carousel-user-exp").slick({
+                appendArrows: $('.arrows-user-exp'),
+                nextArrow: nextArrow,
+                prevArrow: prevArrow,
+                slidesToShow: 2,
+                responsive: [
+                    {
+                    breakpoint: 1041,
+                    settings: {
+                        slidesToShow: 1,
+                            }
+                    }]
+        });
+    }
+    return {
+        init: init
+    };
+
+})();

@@ -1,6 +1,6 @@
 STICK = (function() {
-    var stickydivTop;
     
+    var stickydivTop;
     var $stickydiv, $window;
     
     var init = function() {
@@ -27,7 +27,3 @@ STICK = (function() {
     };
 
 })();
-
-$(document).ready(function(){
-    STICK.init();
-});
